@@ -16,7 +16,7 @@ function GameCard(props) {
       };
 
       fetchData();
-    }, 3000);
+    }, 1000);
   }, []);
   const [jackPot, setJackpot] = useState([]);
   useEffect(() => {
@@ -32,7 +32,7 @@ function GameCard(props) {
       };
 
       fetchData();
-    }, 3000);
+    }, 1000);
   }, []);
   return (
     <div className="img-container">
@@ -63,7 +63,7 @@ function GameCard(props) {
               {jackPots.map((jc) => {
                 if (jc.name == item.id) {
                   return (
-                    <div className="jackpot">
+                    <div key={jc.name} className="jackpot">
                       JACKPOT <span>{jc.amount}</span>
                     </div>
                   );
