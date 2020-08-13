@@ -67,14 +67,14 @@ function GameCard(props) {
                       <div key={jc.name} className="jackpot">
                         JACKPOT <span>{jc.amount}</span>
                       </div>
-                      <div class="container-btn">
-                        <div class="button-gr">Play Game</div>
-                      </div>
                     </div>
                   );
                 }
                 jackPots = [];
               })}
+              <div class="container-btn">
+                <div class="button-gr">Play Game</div>
+              </div>
             </div>
           </div>
         );
