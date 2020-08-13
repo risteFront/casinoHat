@@ -177,3 +177,21 @@ html {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
+.container-btn {
+  display: flex;
+  justify-content: center;
+}
+.button-gr {
+  text-align: center;
+  background-color: cadetblue;
+  color: #fff;
+  width: 100px;
+  height: 25px;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+.button-gr:hover {
+  background-color: #4169e1;
+}

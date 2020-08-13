@@ -63,8 +63,13 @@ function GameCard(props) {
               {jackPots.map((jc) => {
                 if (jc.name == item.id) {
                   return (
-                    <div key={jc.name} className="jackpot">
-                      JACKPOT <span>{jc.amount}</span>
+                    <div>
+                      <div key={jc.name} className="jackpot">
+                        JACKPOT <span>{jc.amount}</span>
+                      </div>
+                      <div class="container-btn">
+                        <div class="button-gr">Play Game</div>
+                      </div>
                     </div>
                   );
                 }
@@ -78,7 +83,3 @@ function GameCard(props) {
   );
 }
 export default GameCard;
-// (
-
-//     <div className="jackpot">JACKPOT</div>
-//   ) : null}
