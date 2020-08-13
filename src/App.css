@@ -1,38 +1,179 @@
-.App {
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #373737;
+}
+.flex-menu div {
+  cursor: pointer;
+  font-size: 20px;
+  max-width: 200px;
+  padding: 10px 33px 15px 33px;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  color: #fff;
+}
+.flex-menu div:hover {
+  cursor: pointer;
+  background-color: #8dc63f;
+}
+.img-container {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.article-card {
+  position: relative;
+  width: 220px;
+  height: 200px;
+  cursor: pointer;
+  margin: 40px 20px 20px 20px;
+}
+.article-img {
+  border-radius: 10%;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.box {
+  position: relative;
+  max-width: 194px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* common */
+.ribbon {
+  width: 76px;
+  height: 77px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid #2980b9;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid #2980b9;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 132px;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 670 14px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+.ribbon2 {
+  width: 76px;
+  height: 77px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon2::before,
+.ribbon2::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid #8dc63f;
+}
+
+.ribbon2 span {
+  position: absolute;
+  display: block;
+  width: 132px;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 670 14px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* top left*/
+.ribbon-top-left {
+  top: -10px;
+  z-index: 2;
+  left: -10px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* top right*/
+.ribbon-top-right {
+  top: -5px;
+  z-index: 2;
+  right: -32px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
 }
-
-.App-link {
-  color: #61dafb;
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -16px;
+  background-color: #8dc63f;
+  top: 34px;
+  transform: rotate(45deg);
+}
+.rbgreen::before,
+.rbgreen::after {
+  border: 5px solid #8dc63f !important;
+}
+.jackpot {
+  color: #8dc63f;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
